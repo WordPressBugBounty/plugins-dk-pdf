@@ -1,13 +1,12 @@
 <?php
 /*
  * Plugin Name: DK PDF
- * Version: 1.9.6
- * Plugin URI: http://wp.dinamiko.com/demos/dkpdf
+ * Version: 1.9.7
  * Description: WordPress to PDF made easy.
  * Author: Emili Castells
- * Author URI: http://www.dinamiko.com
  * Requires at least: 3.9
- * Tested up to: 4.9
+ * Requires PHP: 8.0
+ * Tested up to: 6.6
  * License: MIT
  * Text Domain: dkpdf
  * Domain Path: /languages/
@@ -50,7 +49,7 @@ if ( ! class_exists( 'DKPDF' ) ) {
 		private function setup_constants() {
 
 			if ( ! defined( 'DKPDF_VERSION' ) ) {
-				define( 'DKPDF_VERSION', '1.9.6' );
+				define( 'DKPDF_VERSION', '1.9.7' );
 			}
 			if ( ! defined( 'DKPDF_PLUGIN_DIR' ) ) {
 				define( 'DKPDF_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
@@ -92,13 +91,13 @@ if ( ! class_exists( 'DKPDF' ) ) {
 		}
 
 		public function __clone() {
-
-			_doing_it_wrong( __FUNCTION__, __( 'Cheatin&#8217; huh?', 'dkpdf' ), DKPDF_VERSION );
+            // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			_doing_it_wrong( __FUNCTION__, esc_attr__( 'Cheatin&#8217; huh?', 'dkpdf' ), DKPDF_VERSION );
 		}
 
 		public function __wakeup() {
-
-			_doing_it_wrong( __FUNCTION__, __( 'Cheatin&#8217; huh?', 'dkpdf' ), DKPDF_VERSION );
+            // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			_doing_it_wrong( __FUNCTION__, esc_attr__( 'Cheatin&#8217; huh?', 'dkpdf' ), DKPDF_VERSION );
 		}
 
 	}
@@ -116,7 +115,7 @@ function DKPDF() {
 			'<p>' . 'DK PDF can not be activated because it requires at least PHP version 5.6.0. '
 			. 'In case you can not update PHP, here you can <a href="'. esc_url('https://github.com/Dinamiko/dk-pdf/releases/tag/v1.9.3') .'" target="_blank">download DK PDF 1.9.3</a> which works with PHP 5.3 and above.'
 			. '</p>'
-			. '<a href="' . admin_url( 'plugins.php' ) . '">' . esc_attr__( 'Back', 'dkpdf' ) . '</a>'
+			. '<a href="' . esc_url(admin_url( 'plugins.php' )) . '">' . esc_attr__( 'Back', 'dkpdf' ) . '</a>'
 		);
 	} else {
 
