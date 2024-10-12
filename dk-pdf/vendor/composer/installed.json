@@ -484,5 +484,14 @@
         }
     ],
     "dev": true,
-    "dev-package-names": []
+    "dev-package-names": [
+        "mpdf/mpdf",
+        "mpdf/psr-http-message-shim",
+        "mpdf/psr-log-aware-trait",
+        "myclabs/deep-copy",
+        "paragonie/random_compat",
+        "psr/http-message",
+        "psr/log",
+        "setasign/fpdi"
+    ]
 }

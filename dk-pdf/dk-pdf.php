@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: DK PDF
- * Version: 1.9.7
+ * Version: 1.9.8
  * Description: WordPress to PDF made easy.
  * Author: Emili Castells
  * Requires at least: 3.9
@@ -18,6 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! class_exists( 'DKPDF' ) ) {
 
+    #[AllowDynamicProperties]
 	final class DKPDF {
 
 		private static $instance;
