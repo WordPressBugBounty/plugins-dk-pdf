@@ -1,12 +1,13 @@
 <?php
 /*
  * Plugin Name: DK PDF
- * Version: 1.9.9
+ * Version: 1.9.10
  * Description: WordPress to PDF made easy.
  * Author: Emili Castells
+ * Author URI: https://dinamiko.dev
  * Requires at least: 3.9
  * Requires PHP: 8.0
- * Tested up to: 6.6
+ * Tested up to: 6.8
  * License: MIT
  * Text Domain: dkpdf
  * Domain Path: /languages/
@@ -50,7 +51,7 @@ if ( ! class_exists( 'DKPDF' ) ) {
 		private function setup_constants() {
 
 			if ( ! defined( 'DKPDF_VERSION' ) ) {
-				define( 'DKPDF_VERSION', '1.9.7' );
+				define( 'DKPDF_VERSION', '1.9.10' );
 			}
 			if ( ! defined( 'DKPDF_PLUGIN_DIR' ) ) {
 				define( 'DKPDF_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
