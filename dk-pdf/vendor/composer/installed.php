@@ -3,7 +3,7 @@
         'name' => 'dinamiko/dk-pdf',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '1b32424fdbdfc1aa63f1b0057deb09b2e381a476',
+        'reference' => '3f849a46324c88e6a9541b25c75024b843cc8411',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'dinamiko/dk-pdf' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '1b32424fdbdfc1aa63f1b0057deb09b2e381a476',
+            'reference' => '3f849a46324c88e6a9541b25c75024b843cc8411',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
